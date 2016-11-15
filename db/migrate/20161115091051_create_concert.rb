@@ -3,7 +3,7 @@ class CreateConcert < ActiveRecord::Migration
     create_table :concerts do |t|
       t.string :concerts
       t.integer :tickets_availible
-      t.string :adresse
+      t.string :address
       t.date :concert_date
       t.string :concert_hall
     end
