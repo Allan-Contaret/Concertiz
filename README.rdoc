@@ -5,7 +5,7 @@ Le site web permet à un utilisateur de rechercher et acheter un ticket de conce
 Exemple : http://www.ticketmaster.fr/
 
 <code>
-rake db:create
+rake db:create<br/>
 rake db:migrate
 </code>
 
