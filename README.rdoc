@@ -4,6 +4,11 @@ Réaliser un site web de gestion de ticket de concert.
 Le site web permet à un utilisateur de rechercher et acheter un ticket de concert.
 Exemple : http://www.ticketmaster.fr/
 
+<code>
+rake db:create
+rake db:migrate
+</code>
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
