@@ -4,8 +4,9 @@ class CreateConcerts < ActiveRecord::Migration[5.0]
       t.string :name
       t.integer :tickets_available
       t.string :address
-      t.date :concert_date
+      t.datetime :concert_date
       t.string :concert_hall
+      t.text :description
 
       t.timestamps
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161120015902) do
+ActiveRecord::Schema.define(version: 20161120133908) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(version: 20161120015902) do
     t.string   "name"
     t.integer  "tickets_available"
     t.string   "address"
-    t.date     "concert_date"
+    t.datetime "concert_date"
     t.string   "concert_hall"
+    t.text     "description"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
