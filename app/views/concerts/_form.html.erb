@@ -1,0 +1,49 @@
+<%= form_for @concert do |f| %>
+	<% if @concert.errors.any? %>
+		<div>
+			<h2>
+				<%= pluralize(@concert.errors.count, "error") %> prohibited this concert from being saved:
+			</h2>
+			<ul>
+				<% @concert.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<%end%>
+
+	<p>
+		<%= f.label :name, "Nom" %><br>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.label :address, "Adresse" %><br>
+		<%= f.text_field :address %>
+	</p>
+
+	<p>
+		<%= f.label :tickets_available, "Tickets disponibles" %><br>
+		<%= f.number_field :tickets_available, :step => 0.5 %>
+	</p>
+
+	<p>
+		<%= f.label :concert_date, "Date et horaire du concert" %><br>
+		<%= f.datetime_local_field :concert_date %>
+	</p>
+
+	<p>
+		<%= f.label :concert_hall, "nom de la Salle" %><br>
+		<%= f.text_field :concert_hall %>
+	</p>
+
+	<p>
+		<%= f.label :description, "description" %><br>
+		<%= f.text_area :description %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+	
+<%end%>

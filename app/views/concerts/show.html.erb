@@ -1,0 +1,31 @@
+<p>
+	<strong>Concert:</strong>
+	<%= @concert.name %>
+</p>
+
+<p>
+	<strong>Adresse:</strong>
+	<%= @concert.address %>
+</p>
+
+<p>
+	<strong>Tickets disponibles:</strong>
+	<%= @concert.tickets_available %>
+</p>
+
+<p>
+	<strong>Date du concert:</strong>
+	<%= @concert.concert_date %>
+</p>
+
+<p>
+	<strong>Salle:</strong>
+	<%= @concert.concert_hall %>
+</p>
+
+<p>
+	<strong>Description:</strong>
+	<%= @concert.description %>
+</p>
+
+<%= link_to 'Back', concerts_path %>

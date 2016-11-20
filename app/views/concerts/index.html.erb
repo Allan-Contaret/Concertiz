@@ -1,0 +1,31 @@
+<h1>Concertiz !</h1>
+
+<%= link_to 'Ajouter un concert', new_concert_path %>
+
+<table>
+	<tr>
+		<th>Concert</th>
+		<th>Adresse</th>
+		<th>tickets disponibles</th>
+		<th>Date</th>
+		<th>Salle</th>
+		<th>Description</th>
+	</tr>
+
+	<% @concerts.each do |concert| %>
+		<tr>
+			<td><%= concert.name %></td>
+			<td><%= concert.address %></td>
+			<td><%= concert.tickets_available %></td>
+			<td><%= concert.concert_date %></td>
+			<td><%= concert.concert_hall %></td>
+			<td><%= concert.description %></td>
+			<td><%= link_to 'Show', concert_path(concert) %></td>
+			<td><%= link_to 'Edit', edit_concert_path(concert) %></td>
+			<td><%= link_to 'Destroy', concert_path(concert),
+				method: :delete,
+				data: { confirm: 'Are you sure?' } %>
+			</td>
+		</tr>
+	<% end %>
+</table>
