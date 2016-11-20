@@ -6,7 +6,6 @@ class ConcertsController < ApplicationController
 		@concert = Concert.find(params[:id])
 	end
 
-
 	def new
 		@concert = Concert.new
 	end
@@ -23,6 +22,6 @@ class ConcertsController < ApplicationController
 
 	private
 		def concert_params
-			params.require(:concert).permit(:name, :address)
+			params.require(:concert).permit(:name, :address, :tickets_available)
 		end
 end
