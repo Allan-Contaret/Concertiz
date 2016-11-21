@@ -1,31 +1,28 @@
-<p>
-	<strong>Concert:</strong>
-	<%= @concert.name %>
-</p>
 
-<p>
-	<strong>Adresse:</strong>
-	<%= @concert.address %>
-</p>
 
-<p>
-	<strong>Tickets disponibles:</strong>
-	<%= @concert.tickets_available %>
-</p>
+<div class="raw">
+    <div class="col-xs">
+        <div class="media">
+            <div class="media-left media-middle">
+                <%= link_to image_tag("concert.jpg", :alt => "Generic placeholder image", :class => "media-object rounded", :height => "100px", 
+                    :width => "100px"), "#" %>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading"><%= @concert.name %></h4>
+                <p>Salle : <%= @concert.concert_hall %></p>
+                <p><%= @concert.tickets_available %> places disponibles</p>
+                <p><%= @concert.address %></p>
+            </div>
+        </div>
+    </div>
+    <p>
+        <strong>Description:</strong>
+        <%= @concert.description %>
+    </p>
+    	<%= link_to 'Retour', concerts_path, :class => "btn btn-outline-success" %>
+        <button type="button" class="btn btn-primary ">Réserver</button>
+    </div>
 
-<p>
-	<strong>Date du concert:</strong>
-	<%= @concert.concert_date %>
-</p>
+</div>
 
-<p>
-	<strong>Salle:</strong>
-	<%= @concert.concert_hall %>
-</p>
 
-<p>
-	<strong>Description:</strong>
-	<%= @concert.description %>
-</p>
-
-<%= link_to 'Back', concerts_path %>
