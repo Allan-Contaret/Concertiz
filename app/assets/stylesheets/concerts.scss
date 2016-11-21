@@ -1,3 +1,14 @@
 // Place all the styles related to the Concerts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.button_create_concert {
+	margin-top : 20px;
+}
+
+.borders{
+	border-style: solid;
+	border-color:  #879998;
+    border-width: 1px;
+    padding : 5px;
+    margin-top: 30px;
+}
