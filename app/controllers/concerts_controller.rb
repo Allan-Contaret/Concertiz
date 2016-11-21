@@ -1,7 +1,7 @@
 class ConcertsController < ApplicationController
 	layout "application.html.erb"
 	def index
-		@concerts = Concert.all
+		@concerts = Concert.order(concert_date: :desc)
 	end
 
 	def show
@@ -40,7 +40,7 @@ class ConcertsController < ApplicationController
 		if @concert.update(concert_params)
 			redirect_to @concert
 		else
-			render 'edit'
+			render 'edit'		
 		end
 	end
 

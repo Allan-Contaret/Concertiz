@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 	layout "application.html.erb"
 	def index
-		@concerts = Concert.order(created_at: :desc).limit(4)
+		@concerts = Concert.order(concert_date: :desc).limit(4)
 	end
 end

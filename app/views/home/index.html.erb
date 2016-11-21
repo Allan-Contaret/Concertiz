@@ -6,11 +6,12 @@
                     <div class="media">
                         <div class="media-left media-middle">
                             <%= link_to image_tag("concert.jpg", :alt => "Generic placeholder image", :class => "media-object", :height => "100px",
-                                :width => "100px"), "#" %>
+                                :width => "100px"), concert_path(concert) %>
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading"><%= concert.name %></h4>
-                            <p>30/300 places disponibles</p>
+                            <p><%= concert.tickets_available %> places disponibles</p>
+                            <p>Salle : <%= concert.concert_hall %></p>
                             <%= link_to "Voir plus", concert_path(concert), :class => "nav-link" %>
                         </div>
                     </div>
