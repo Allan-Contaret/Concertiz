@@ -1,4 +1,4 @@
-<div class="raw">
+<div class="row">
     <div class="col-xs">
         <div class="media">
             <div class="media-left media-middle">
@@ -12,15 +12,14 @@
                 <p><%= @concert.address %></p>
             </div>
         </div>
+        <p>
+            <strong>Description:</strong>
+            <%= @concert.description %>
+        </p>
+            <%= link_to 'Retour', concerts_path, :class => "btn btn-outline-success" %>
+            <button type="button" class="btn btn-primary ">Réserver</button>
+        </div>
     </div>
-    <p>
-        <strong>Description:</strong>
-        <%= @concert.description %>
-    </p>
-    	<%= link_to 'Retour', concerts_path, :class => "btn btn-outline-success" %>
-        <button type="button" class="btn btn-primary ">Réserver</button>
-    </div>
-
 </div>
 
 

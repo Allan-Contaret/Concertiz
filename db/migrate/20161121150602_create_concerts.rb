@@ -7,6 +7,7 @@ class CreateConcerts < ActiveRecord::Migration[5.0]
       t.datetime :concert_date
       t.string :concert_hall
       t.text :description
+      t.string :image
 
       t.timestamps
     end

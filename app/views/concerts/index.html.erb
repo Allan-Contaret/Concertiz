@@ -1,23 +1,21 @@
-<div class="container">
-	<%= link_to 'Ajouter un concert', new_concert_path, :class => "btn btn-primary btn-lg btn-block button_create_concert" %>
-	
-	<% @concerts.each do |concert| %>
-		<div class="col-xs borders">
-			<div class="media">
-				<div class="media-left media-middle">
-					<%= link_to image_tag("concert.jpg", :alt => "Generic placeholder image", :class => "media-object rounded-circle", :height => "150px", 
-						:width => "250"), concert_path(concert) %>
-				</div>
-				<div class="media-body media-middle">
-						<h4 class="media-heading"> <%= concert.name %> </h4>
-						<p> <%= concert.tickets_available %> places disponibles </p>
-						<p> Salle : <%= concert.concert_hall %> au <%= concert.address %> </p>
-						<p> Date de l'événement : <%= concert.concert_date %> </p>
-				</div>
-				<div class="media-left media-middle">
-					<%= link_to 'Voir la description du concert', concert_path(concert), :class => "btn btn-outline-success" %>
-				</div>
+<%= link_to 'Ajouter un concert', new_concert_path, :class => "btn btn-primary btn-lg btn-block button_create_concert" %>
+
+<% @concerts.each do |concert| %>
+	<div class="col-xs borders">
+		<div class="media">
+			<div class="media-left media-middle">
+				<%= link_to image_tag("concert.jpg", :alt => "Generic placeholder image", :class => "media-object rounded-circle", :height => "150px", 
+					:width => "250"), concert_path(concert) %>
+			</div>
+			<div class="media-body media-middle">
+					<h4 class="media-heading"> <%= concert.name %> </h4>
+					<p> <%= concert.tickets_available %> places disponibles </p>
+					<p> Salle : <%= concert.concert_hall %> au <%= concert.address %> </p>
+					<p> Date de l'événement : <%= concert.concert_date %> </p>
+			</div>
+			<div class="media-left media-middle">
+				<%= link_to 'Voir la description du concert', concert_path(concert), :class => "btn btn-outline-success" %>
 			</div>
 		</div>
-	<% end %>
-<div>
+	</div>
+<% end %>
