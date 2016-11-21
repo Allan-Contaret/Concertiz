@@ -4,14 +4,16 @@ one:
   name: MyString
   tickets_available: 1
   address: MyString
-  concert_date: 2016-11-20 13:39:08
+  concert_date: 2016-11-21 15:06:02
   concert_hall: MyString
   description: MyText
+  image: MyString
 
 two:
   name: MyString
   tickets_available: 1
   address: MyString
-  concert_date: 2016-11-20 13:39:08
+  concert_date: 2016-11-21 15:06:02
   concert_hall: MyString
   description: MyText
+  image: MyString
