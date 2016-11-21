@@ -1,17 +1,21 @@
-<div class="row flex-items-xs-middle">
-    <% @concerts.each do |concert| %>
-        <div class="col-xs-6">
-            <div class="media">
-                <div class="media-left media-middle">
-                    <%= link_to image_tag("concert.jpg", :alt => "Generic placeholder image", :class => "media-object", :height => "100px",
-                        :width => "100px"), "#" %>
+<div class="row flex-items-md-top">
+    <div class="col-md-9">
+            <div class="row flex-items-md-middle">
+            <% @concerts.each do |concert| %>
+                <div class="col-md-6 cardo">
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <%= link_to image_tag("concert.jpg", :alt => "Generic placeholder image", :class => "media-object", :height => "100px",
+                                :width => "100px"), "#" %>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><%= concert.name %></h4>
+                            <p>30/300 places disponibles</p>
+                            <%= link_to "Voir plus", concert_path(concert), :class => "nav-link" %>
+                        </div>
+                    </div>
                 </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><%= concert.name %></h4>
-                    <p>30/300 places disponibles</p>
-                    <%= link_to "Voir plus", concert_path(concert), :class => "nav-link" %>
-                </div>
-            </div>
+            <% end %>
         </div>
-    <% end %>
+    </div>
 </div>
