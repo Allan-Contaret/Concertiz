@@ -1,31 +1,23 @@
-<h1>Concertiz !</h1>
-
-<%= link_to 'Ajouter un concert', new_concert_path %>
-
-<table>
-	<tr>
-		<th>Concert</th>
-		<th>Adresse</th>
-		<th>Tickets disponibles</th>
-		<th>Date</th>
-		<th>Salle</th>
-		<th>Description</th>
-	</tr>
-
+<div class="container">
+	<%= link_to 'Ajouter un concert', new_concert_path, :class => "btn btn-primary btn-lg btn-block button_create_concert" %>
+	
 	<% @concerts.each do |concert| %>
-		<tr>
-			<td><%= concert.name %></td>
-			<td><%= concert.address %></td>
-			<td><%= concert.tickets_available %></td>
-			<td><%= concert.concert_date %></td>
-			<td><%= concert.concert_hall %></td>
-			<td><%= concert.description %></td>
-			<td><%= link_to 'Show', concert_path(concert) %></td>
-			<td><%= link_to 'Edit', edit_concert_path(concert) %></td>
-			<td><%= link_to 'Destroy', concert_path(concert),
-				method: :delete,
-				data: { confirm: 'Are you sure?' } %>
-			</td>
-		</tr>
+		<div class="col-xs borders">
+			<div class="media">
+				<div class="media-left media-middle">
+					<%= link_to image_tag("concert.jpg", :alt => "Generic placeholder image", :class => "media-object rounded-circle", :height => "150px", 
+						:width => "250"), "#" %>
+				</div>
+				<div class="media-body media-middle">
+						<h4 class="media-heading"> <%= concert.name %> </h4>
+						<p> <%= concert.tickets_available %> places disponibles </p>
+						<p> Salle : <%= concert.concert_hall %> au <%= concert.address %> </p>
+						<p> Date de l'événement : <%= concert.concert_date %> </p>
+				</div>
+				<div class="media-left media-middle">
+					<%= link_to 'Voir la description du concert', concert_path(concert), :class => "btn btn-outline-success" %>
+				</div>
+			</div>
+		</div>
 	<% end %>
-</table>
+<div>
