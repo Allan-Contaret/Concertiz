@@ -40,7 +40,7 @@ class ConcertsController < ApplicationController
 		if @concert.update(concert_params)
 			redirect_to @concert
 		else
-			render 'edit'		
+			render 'edit'
 		end
 	end
 

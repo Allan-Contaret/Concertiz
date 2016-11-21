@@ -3,6 +3,7 @@
     <head>
         <!-- Required meta tags always come first
             -->
+        <%= csrf_meta_tags %>
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
         <meta content="ie=edge" http-equiv="x-ua-compatible"/>
@@ -11,6 +12,7 @@
         <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" %>
         <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap-flex.min.css" %>
         <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     </head>
     <body>
         <nav class="navbar navbar-full navbar-light bg-faded">
@@ -27,7 +29,9 @@
                 </ul>
             </div>
         </nav>
-        <%= yield %>
+        <div class="container">
+            <%= yield %>
+        </div>
         <!-- jQuery first, then Tether, then Bootstrap JS.
     -->
     <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', :crossorigin => "anonymous" %>
