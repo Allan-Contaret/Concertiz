@@ -1,13 +1,13 @@
 <%= form_tag user_sessions_path, :method => :post do %>
   <div class="field">
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email %>
+    <%= label_tag 'formGroupExampleInput', 'Email', class: 'margin_top' %>
+    <%= text_field_tag :email, 'Ex : email@xyz.com', id: 'formGroupExampleInput2', class: 'form-control' %>
   </div>
   <div class="field">
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
+    <%= label_tag 'formGroupExampleInput', 'Mot de Passe', class: 'margin_top' %>
+    <%= password_field_tag :password, '', id: 'formGroupExampleInput2', class: 'form-control', type: 'password' %>
   </div>
   <div class="actions">
-    <%= submit_tag "Login" %>
+    <%= submit_tag "Se connecter", class: 'btn btn-primary btn-lg btn-block margin_top' %>
   </div>
 <% end %>
