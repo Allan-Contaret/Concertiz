@@ -16,6 +16,9 @@
 				</div>
 				<div class="media-left media-middle">
 					<%= link_to 'Voir la description du concert', concert_path(concert), :class => "btn btn-outline-success" %>
+					<% if logged_in? && current_user.admin==1 %>
+					<%= link_to 'Supprimer', concert_path(concert),method: :delete, data: { confirm: 'Es-tu sûr?'}, :class => "btn btn-outline-success" %>
+					<% end %>
 				</div>
 			</div>
 		</div>
