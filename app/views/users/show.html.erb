@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Email:</strong>
+  <strong>Email :</strong>
   <%= @user.email %>
 </p>
 
 <p>
-  <strong>Crypted password:</strong>
+  <strong>Mot de passe crypté :</strong>
   <%= @user.crypted_password %>
 </p>
 
-<p>
-  <strong>Salt:</strong>
-  <%= @user.salt %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user), :class => "btn btn-outline-success" %>
-<%= link_to 'Back', users_path, :class => "btn btn-outline-success" %>
+<%= link_to 'Éditer le profil', edit_user_path(@user), :class => "btn btn-outline-success" %>
+<%= link_to 'Retour', users_path, :class => "btn btn-outline-success" %>
