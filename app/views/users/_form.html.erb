@@ -16,11 +16,11 @@
     </div>
     <div class="form-group">
         <%= f.label "Mot de passe", :for => "formGroupExampleInput" %>
-        <%= f.text_field :password, :class => "form-control", :id => "formGroupExampleInput2", :placeholder => "Mot de passe" %>
+        <%= f.text_field :password, :class => "form-control", :id => "formGroupExampleInput2", :placeholder => "Mot de passe", :type => "password" %>
     </div>
     <div class="form-group">
         <%= f.label "Confirmation du mot de passe", :for => "formGroupExampleInput" %>
-        <%= f.text_field :password_confirmation, :class => "form-control", :id => "formGroupExampleInput2", :placeholder => "Confirmation du mot de passe" %>
+        <%= f.text_field :password_confirmation, :class => "form-control", :id => "formGroupExampleInput2", :placeholder => "Confirmation du mot de passe", :type => "password" %>
     </div>
 
     <%= f.submit "Créer le compte", :class => "btn btn-primary btn-lg btn-block" %>
