@@ -13,6 +13,20 @@
         <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     </head>
     <body>
+        <nav class="navbar navbar-full navbar-light bg-faded">
+            <div class="container">
+                <%= link_to "Concertiz", home_index_path, :class => "navbar-brand" %>
+                <form class="form-inline float-xs-right">
+                    <input class="form-control" placeholder="Rechercher" type="text"/>
+                    <%= link_to "Rechercher", "#", :type => "submit", :class => "btn btn-outline-success" %>
+                </form>
+                <ul class="nav navbar-nav float-xs-right a_connexion">
+                    <li class="nav-item">
+                        <%= link_to "Se connecter", "#", :class => "nav-link" %>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <%= yield %>
     </body>
 </html>
