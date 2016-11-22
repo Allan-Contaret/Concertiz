@@ -4,9 +4,12 @@ get 'user_sessions/new'
 get 'user_sessions/create'
 get 'user_sessions/destroy'
 
+
 resources :users
 resources :home
-resources :concerts
+resources :concerts do
+	resources :reservations
+end
 root 'home#index'
 root :to => 'users#index'
 resources :user_sessions

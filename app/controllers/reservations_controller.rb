@@ -5,13 +5,12 @@ class ReservationsController < ApplicationController
 	end
 
 	def new
-		@reservation = Reservation.new
+		@reservation = Reservation.new(concert_id: params[:concert_id])
+		@concert = Concert.find(params[:concert_id])
 	end
 
 	def create
 		@reservation = Reservation.new(reservation_params)
-		@reservation.user_id = current_user.id
-		@reservation.concert_id = current_concert.id
 		if @reservation.save
 			redirect_to root_url
 		else
