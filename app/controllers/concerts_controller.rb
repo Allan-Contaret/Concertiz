@@ -1,5 +1,6 @@
 class ConcertsController < ApplicationController
 	layout "application.html.erb"
+	skip_before_action :require_login, except: [:show]
 	def index
 		@concerts = Concert.order(concert_date: :desc)
 	end
