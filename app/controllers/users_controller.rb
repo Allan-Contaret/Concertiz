@@ -19,7 +19,12 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    set_user
+    @user = User.find(params[:id])
+    if current_user.admin == true || current_user.id == @user.id
+      set_user
+    else
+      redirect_to home_index_path, alert: "Vous n'êtes pas autorisé à entrer ici"
+    end
   end
 
   # POST /users

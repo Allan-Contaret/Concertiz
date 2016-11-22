@@ -2,11 +2,11 @@
 	<% if @concert.errors.any? %>
 		<div>
 			<h2>
-				<%= pluralize(@concert.errors.count, "error") %> prohibited this concert from being saved:
+				<%= pluralize(@concert.errors.count, "error") %>:
 			</h2>
 			<ul>
 				<% @concert.errors.full_messages.each do |msg| %>
-					<li> %= msg %> </li>
+					<li><%= msg %></li>
 				<% end %>
 			</ul>
 		</div>
@@ -45,11 +45,6 @@
 	<p>
 		<%= f.label :description, "Description" %><br>
 		<%= f.text_area :description %>
-	</p>
-
-	<p>
-		<%= f.label :image, "Image de couverture"%><br>
-		<%= f.file_field :image %>
 	</p>
 
 	<p>
