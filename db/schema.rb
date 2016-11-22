@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20161122094739) do
     t.string   "concert_hall"
     t.text     "description"
     t.string   "image"
+    t.float    "price"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
