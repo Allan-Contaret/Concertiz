@@ -14,7 +14,9 @@ class ReservationsController < ApplicationController
 	def create
 		@reservation = Reservation.new(reservation_params)
 		@reservation.concert = Concert.find(params[:concert_id])
+		@concert.tickets_available -= @reservation.tickets_number
 		if @reservation.save
+			@concert.save
 			redirect_to root_url
 		else
 			render json: @reservation.errors
