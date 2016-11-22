@@ -1,7 +1,15 @@
 <% if @searches.present? %>
-	<% @searches.each do |search| %>
-		<%= link_to 'Voir la description de ' "#{search.name}", concert_path(search), :class => "btn btn-outline-success" %>
-	<%end%>
+	<div class="col-xs-3 borders center">
+		<div>
+			<%= link_to image_tag("concert.jpg", :alt => "Generic placeholder image", :class => "rounded-circle", :height => "150px", :width => "250") %>
+		</div>
+		<div>		
+			<% @searches.each do |search| %>
+			<h4> <%= search.name %> </h4>
+				<%= link_to 'Voir la description de ' "#{search.name}", concert_path(search), :class => "btn btn-outline-success" %>
+			<%end%>
+		</div>
+	</div>
 <% else %>
 	<p> Aucun résultat ne correspond à votre demande "<%= params[:query] %>".</p>
 <% end %>
