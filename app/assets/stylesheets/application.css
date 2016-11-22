@@ -16,3 +16,7 @@
 .content {
 	padding: 15px;
 }
+
+.search {
+	border-radius: 0 .25rem .25rem 0;
+}
