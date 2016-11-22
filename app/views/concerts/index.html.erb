@@ -14,6 +14,7 @@
 					<p> <%= concert.tickets_available %> places disponibles </p>
 					<p> Salle : <%= concert.concert_hall %> au <%= concert.address %> </p>
 					<p> Date de l'événement : <%= concert.concert_date %> </p>
+					<p> Prix : <%= @concert.price %> € </p>
 			</div>
 			<div class="media-left media-middle">
 				<%= link_to 'Voir la description du concert', concert_path(concert), :class => "btn btn-outline-success" %>
