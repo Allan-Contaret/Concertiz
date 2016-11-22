@@ -24,7 +24,12 @@
 
 	<p>
 		<%= f.label :tickets_available, "Tickets disponibles" %><br>
-		<%= f.number_field :tickets_available, :step => 0.5 %>
+		<%= f.number_field :tickets_available, :step => 1, :min => 0 %>
+	</p>
+
+	<p>
+		<%= f.label :price, "Prix (en €)" %><br>
+		<%= f.number_field :price, :step => 0.5, :min => 0 %>
 	</p>
 
 	<p>
