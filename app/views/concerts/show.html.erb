@@ -18,7 +18,7 @@
             <%= @concert.description %>
         </p>
             <%= link_to 'Retour', concerts_path, :class => "btn btn-outline-success" %>
-            <h5><p id="bouton" class="btn btn-primary" role="button"> <%= link_to "Réserver", new_concert_reservation_path(@concert)%></p></h5>
+            <%= link_to "Réserver", new_concert_reservation_path(@concert), :class =>"btn btn-primary"%>
         </div>
     </div>
 </div>
