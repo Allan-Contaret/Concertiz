@@ -12,6 +12,7 @@
                             <h4 class="media-heading"><%= concert.name %></h4>
                             <p><%= concert.tickets_available %> places disponibles</p>
                             <p>Salle : <%= concert.concert_hall %></p>
+                            <p>Prix : <%= concert.price %> €</p>
                             <%= link_to "Voir plus", concert_path(concert), :class => "nav-link" %>
                         </div>
                     </div>
