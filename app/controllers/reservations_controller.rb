@@ -3,7 +3,11 @@ class ReservationsController < ApplicationController
 	before_action :find_concert
 
 	def index
-		@reservations = Reservation.all
+		if current_user.admin == true
+			@reservations = Reservation.all
+		else
+			@reservations = Reservation.where("user_id = ?", current_user.id)
+		end
 		@concert = Concert.find(params[:concert_id])
 	end
 

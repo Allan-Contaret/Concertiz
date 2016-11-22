@@ -2,6 +2,12 @@
 <p>Prix unitaire : <%= @concert.price %> €<br>
 Places disponibles : <%= @concert.tickets_available %></p>
 <hr>
+<p><small>
+<% if current_user.admin == true %>
+	Vous êtes administrateur. Vous voyez toutes les réservations.
+<%else%>
+	Vos réservations
+<%end%></small></p>
 <% @reservations.each do |reservation| %>
 	<p>
 		Client : <%= reservation.user.email %> | <%= reservation.user.lastname.upcase %> <%= reservation.user.firstname %><br>
