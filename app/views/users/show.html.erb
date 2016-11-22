@@ -3,7 +3,15 @@
   <strong>Email :</strong>
   <%= @user.email %>
 </p>
-<% if current_user %>
+<p>
+	<strong>Nom</strong>
+  	<%= @user.lastname.upcase %>
+</p>
+<p>
+	<strong>Prénom</strong>
+	<%= @user.firstname.capitalize %>
+</p>
+<% if current_user == true || current_user.id == @user.id %>
 	<%= link_to 'Éditer le profil', edit_user_path(@user), :class => "btn btn-outline-success" %>
 <%end%>
 <%= link_to 'Retour', users_path, :class => "btn btn-outline-success" %>
