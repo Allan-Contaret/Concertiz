@@ -1,0 +1,7 @@
+<% if @searches.present? %>
+	<% @searches.each do |search| %>
+		<%= link_to 'Voir la description de ' "#{search.name}", concert_path(search), :class => "btn btn-outline-success" %>
+	<%end%>
+<% else %>
+	<p> Aucun résultat ne correspond à votre demande "<%= params[:query] %>".</p>
+<% end %>

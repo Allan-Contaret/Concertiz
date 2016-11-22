@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20161122094739) do
     t.string   "concert_hall"
     t.text     "description"
     t.string   "image"
-    t.float    "price"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
@@ -36,6 +35,11 @@ ActiveRecord::Schema.define(version: 20161122094739) do
     t.integer  "tickets_number"
     t.index ["concert_id"], name: "index_reservations_on_concert_id", using: :btree
     t.index ["user_id"], name: "index_reservations_on_user_id", using: :btree
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
