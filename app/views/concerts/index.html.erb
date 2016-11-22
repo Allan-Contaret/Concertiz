@@ -1,4 +1,6 @@
-<%= link_to 'Ajouter un concert', new_concert_path, :class => "btn btn-primary btn-lg btn-block button_create_concert" %>
+<% if current_user %>
+	<%= link_to 'Ajouter un concert', new_concert_path, :class => "btn btn-primary btn-lg btn-block button_create_concert" %>
+<% end %>
 
 <% @concerts.each do |concert| %>
 	<div class="col-xs borders">
