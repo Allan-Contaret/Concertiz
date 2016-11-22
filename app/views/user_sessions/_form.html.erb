@@ -1,11 +1,11 @@
 <%= form_tag user_sessions_path, :method => :post do %>
   <div class="field">
-    <%= label_tag 'formGroupExampleInput', 'Email', class: 'margin_top' %>
-    <%= text_field_tag :email, '', placeholder: 'Ex : email@xyz.com', id: 'formGroupExampleInput2', class: 'form-control' %>
+    <%= label_tag :email, 'Email', class: 'margin_top' %>
+    <%= text_field_tag :email, '', placeholder: 'Ex : email@xyz.com', class: 'form-control' %>
   </div>
   <div class="field">
-    <%= label_tag 'formGroupExampleInput', 'Mot de Passe', class: 'margin_top' %>
-    <%= password_field_tag :password, '', id: 'formGroupExampleInput2', class: 'form-control', type: 'password' %>
+    <%= label_tag :password, 'Mot de Passe', class: 'margin_top' %>
+    <%= password_field_tag :password, '', class: 'form-control', type: 'password' %>
   </div>
   <div class="actions">
     <%= submit_tag "Se connecter", class: 'btn btn-primary btn-lg btn-block margin_top' %>
