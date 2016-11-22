@@ -4,4 +4,5 @@ class Concert < ApplicationRecord
 	validates :tickets_available, presence: {message: "obligatoire"}
 	validates :concert_hall, presence: {message: "obligatoire"}
 	validates :description, length: {maximum: 255}
+	validates :price, presence: {message: "obligatoire"}
 end

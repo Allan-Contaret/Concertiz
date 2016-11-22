@@ -8,6 +8,7 @@ class CreateConcerts < ActiveRecord::Migration[5.0]
       t.string :concert_hall
       t.text :description
       t.string :image
+      t.float :price
 
       t.timestamps
     end
