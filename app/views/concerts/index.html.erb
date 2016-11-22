@@ -14,10 +14,13 @@
 					<p> <%= concert.tickets_available %> places disponibles </p>
 					<p> Salle : <%= concert.concert_hall %> au <%= concert.address %> </p>
 					<p> Date de l'événement : <%= concert.concert_date %> </p>
-					<p> Prix : <%= @concert.price %> € </p>
+					<p> Prix : <%= concert.price %> € </p>
 			</div>
 			<div class="media-left media-middle">
 				<%= link_to 'Voir la description du concert', concert_path(concert), :class => "btn btn-outline-success" %>
+				<% if logged_in? && current_user.admin==true %>
+				<%= link_to 'Supprimer', concert_path(concert.id), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-success" %>
+				<% end %>
 			</div>
 		</div>
 	</div>

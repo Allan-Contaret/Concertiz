@@ -3,7 +3,7 @@ class ConcertsController < ApplicationController
 	before_action :require_login, except: [:index, :show]
 	
 	def index
-		@concerts = Concert.order(concert_date: :desc)
+		@concerts = Concert.all.order(concert_date: :desc)
 	end
 
 	def show
