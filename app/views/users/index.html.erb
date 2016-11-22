@@ -17,8 +17,11 @@
         <td><%= user.email %></td>
         <td><%= user.crypted_password %></td>
         <td><%= link_to 'Voir profil', user, :class => "btn btn-outline-success" %></td>
-        <td><%= link_to 'Éditer profil', edit_user_path(user), :class => "btn btn-outline-success" %></td>
-        <td><%= link_to 'Supprimer', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-success" %></td>
+        <% if current_user %>
+          <td><%= link_to 'Éditer profil', edit_user_path(user), :class => "btn btn-outline-success" %></td>
+          <td><%= link_to 'Supprimer', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-outline-success" %>
+          </td>
+          <% end %>
       </tr>
     <% end %>
   </tbody>

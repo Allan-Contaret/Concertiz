@@ -4,6 +4,7 @@
   <strong>Email :</strong>
   <%= @user.email %>
 </p>
-
+<% if current_user %>
 <%= link_to 'Éditer le profil', edit_user_path(@user), :class => "btn btn-outline-success" %>
+<%end%>
 <%= link_to 'Retour', users_path, :class => "btn btn-outline-success" %>

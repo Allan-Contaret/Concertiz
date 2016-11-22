@@ -1,6 +1,7 @@
 class ConcertsController < ApplicationController
 	layout "application.html.erb"
-	skip_before_action :require_login, except: [:show]
+	before_action :require_login, except: [:index, :show]
+	
 	def index
 		@concerts = Concert.order(concert_date: :desc)
 	end
@@ -55,5 +56,8 @@ class ConcertsController < ApplicationController
 	private
 		def concert_params
 			params.require(:concert).permit(:name, :address, :tickets_available, :concert_date, :concert_hall, :description)
+		end
+		def not_authenticated
+			redirect_to login_path, alert: "Please login first"
 		end
 end
