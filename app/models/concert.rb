@@ -1,4 +1,5 @@
 class Concert < ApplicationRecord
+	has_many :reservation
 	validates :name, presence: {message: "obligatoire"}, length: { maximum: 30 }
 	validates :address, presence: {message: "obligatoire"}
 	validates :tickets_available, presence: {message: "obligatoire"}

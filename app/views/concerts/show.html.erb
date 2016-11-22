@@ -22,6 +22,8 @@
             
             <%= link_to "Réserver", new_concert_reservation_path(@concert), :class =>"btn btn-primary"%>
             <% end %>
+            <%= link_to "voir les réservations", concert_reservations_path(@concert), :class =>"btn btn-sm btn-link"%>
+
     </div>
     <div class="col-md">
         <div class="iframe-container">
