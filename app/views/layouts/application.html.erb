@@ -21,8 +21,12 @@
             <div class="container">
                 <%= link_to "Concertiz", home_index_path, :class => "navbar-brand" %>
                 <form class="form-inline float-xs-right">
-                    <input class="form-control" placeholder="Rechercher" type="text"/>
-                    <%= button_to "Rechercher", "#", :type => "submit", :class => "btn btn-outline-success" %>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Rechercher" type="text"/>
+                        <span class="input-group-btn">
+                            <%= link_to "Go!", "#", :type => "button", :class => "btn btn-secondary" %>
+                        </span>
+                    </div>
                 </form>
                 <ul class="nav navbar-nav float-xs-right a_connexion">
                     <% if current_user %>
