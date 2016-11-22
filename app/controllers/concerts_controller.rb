@@ -58,6 +58,6 @@ class ConcertsController < ApplicationController
 			params.require(:concert).permit(:name, :address, :tickets_available, :concert_date, :concert_hall, :description, :price)
 		end
 		def not_authenticated
-			redirect_to login_path, alert: "Please login first"
+			redirect_to login_path, alert: "Veuillez vous connectez"
 		end
 end
